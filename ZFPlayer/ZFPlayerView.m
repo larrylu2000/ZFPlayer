@@ -941,7 +941,7 @@ typedef NS_ENUM(NSInteger, PanDirection){
  *  @param gesture UITapGestureRecognizer
  */
 - (void)doubleTapAction:(UIGestureRecognizer *)gesture {
-    if (self.playDidEnd) { return;  }
+    if (self.disableDoubleTap) { return;  }
     // 显示控制层
     [self.controlView zf_playerShowControlView];
     if (self.isPauseByUser) { [self play]; }
@@ -1022,6 +1022,9 @@ typedef NS_ENUM(NSInteger, PanDirection){
         if (!self.isDragged) { // 如果不是拖拽中，直接结束播放
             self.playDidEnd = YES;
             [self.controlView zf_playerPlayEnd];
+            if (self.autoLoop) {
+                [self seekToTime:0 completionHandler:nil];
+            }
         }
     }
 }
@@ -1079,14 +1082,6 @@ typedef NS_ENUM(NSInteger, PanDirection){
         }];
     }
 }
-
-- (void) playToEndTime:(NSNotification *)notification
-{
-    CMTime t1 = CMTimeMake(5, 100);
-    [self.player seekToTime:t1];
-    [self.player play];
-}
-
 
 #pragma mark - UIPanGestureRecognizer手势方法
 
