@@ -182,6 +182,8 @@ typedef NS_ENUM(NSInteger, PanDirection){
     
     // 监听耳机插入和拔掉通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioRouteChangeListenerCallback:) name:AVAudioSessionRouteChangeNotification object:nil];
+    // 播放结束通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playToEndTime:) name:AVPlayerItemFailedToPlayToEndTimeErrorKey object:nil];
     
     // 监测设备方向
     [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
@@ -1077,6 +1079,14 @@ typedef NS_ENUM(NSInteger, PanDirection){
         }];
     }
 }
+
+- (void) playToEndTime:(NSNotification *)notification
+{
+    CMTime t1 = CMTimeMake(5, 100);
+    [self.player seekToTime:t1];
+    [self.player play];
+}
+
 
 #pragma mark - UIPanGestureRecognizer手势方法
 
