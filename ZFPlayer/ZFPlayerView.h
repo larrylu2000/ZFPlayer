@@ -42,9 +42,9 @@
 
 // playerLayer的填充模式（默认：等比例填充，直到一个维度到达区域边界）
 typedef NS_ENUM(NSInteger, ZFPlayerLayerGravity) {
-     ZFPlayerLayerGravityResize,           // 非均匀模式。两个维度完全填充至整个视图区域
-     ZFPlayerLayerGravityResizeAspect,     // 等比例填充，直到一个维度到达区域边界
-     ZFPlayerLayerGravityResizeAspectFill  // 等比例填充，直到填充满整个视图区域，其中一个维度的部分区域会被裁剪
+    ZFPlayerLayerGravityResize,           // 非均匀模式。两个维度完全填充至整个视图区域
+    ZFPlayerLayerGravityResizeAspect,     // 等比例填充，直到一个维度到达区域边界
+    ZFPlayerLayerGravityResizeAspectFill  // 等比例填充，直到填充满整个视图区域，其中一个维度的部分区域会被裁剪
 };
 
 // 播放器的几种状态
@@ -76,10 +76,10 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 @property (nonatomic, assign) BOOL                    autoLoop;
 /** 禁用双击手势（默认为NO）*/
 @property (nonatomic, assign) BOOL                    disableDoubleTap;
-/** 禁用手势控制音量*/
-@property (nonatomic, assign) BOOL                    disableVolumeGesture;
-/** 禁用手势控制亮度*/
-@property (nonatomic, assign) BOOL                    disableBrightnessGesture;
+/** 是否禁止旋转内容（默认为NO）*/
+@property (nonatomic, assign) BOOL                    isLockScreen;
+/** 禁用手势控制音量,亮度，播放进度*/
+@property (nonatomic, assign) BOOL                    disableControlGesture;
 /** 当cell划出屏幕的时候停止播放（默认为NO） */
 @property (nonatomic, assign) BOOL                    stopPlayWhileCellNotVisable;
 /** 当cell播放视频由全屏变为小屏时候，是否回到中间位置(默认YES) */
@@ -126,8 +126,9 @@ typedef NS_ENUM(NSInteger, ZFPlayerState) {
 - (void)play;
 
 /**
-  * 暂停
+ * 暂停
  */
 - (void)pause;
 
 @end
+
