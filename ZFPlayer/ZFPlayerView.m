@@ -697,13 +697,13 @@ typedef NS_ENUM(NSInteger, PanDirection){
         // 这个地方加判断是为了从全屏的一侧,直接到全屏的另一侧不用修改限制,否则会出错;
         if (currentOrientation == UIInterfaceOrientationPortrait) {
             [self removeFromSuperview];
-            ZFBrightnessView *brightnessView = [ZFBrightnessView sharedBrightnessView];
-            [[UIApplication sharedApplication].keyWindow insertSubview:self belowSubview:brightnessView];
-            [self mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.width.equalTo(@(ScreenHeight));
-                make.height.equalTo(@(ScreenWidth));
-                make.center.equalTo([UIApplication sharedApplication].keyWindow);
-            }];
+//            ZFBrightnessView *brightnessView = [ZFBrightnessView sharedBrightnessView];
+//            [[UIApplication sharedApplication].keyWindow insertSubview:self belowSubview:brightnessView];
+//            [self mas_remakeConstraints:^(MASConstraintMaker *make) {
+//                make.width.equalTo(@(ScreenHeight));
+//                make.height.equalTo(@(ScreenWidth));
+//                make.center.equalTo([UIApplication sharedApplication].keyWindow);
+//            }];
         }
     }
     // iOS6.0之后,设置状态条的方法能使用的前提是shouldAutorotate为NO,也就是说这个视图控制器内,旋转要关掉;
@@ -823,25 +823,25 @@ typedef NS_ENUM(NSInteger, PanDirection){
                     [collectionView scrollToItemAtIndexPath:self.indexPath atScrollPosition:UICollectionViewScrollPositionTop animated:NO];
                 }
             }
-            [self.brightnessView removeFromSuperview];
-            [[UIApplication sharedApplication].keyWindow addSubview:self.brightnessView];
-            [self.brightnessView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.width.height.mas_equalTo(155);
-                make.leading.mas_equalTo((ScreenWidth-155)/2);
-                make.top.mas_equalTo((ScreenHeight-155)/2);
-            }];
+//            [self.brightnessView removeFromSuperview];
+//            [[UIApplication sharedApplication].keyWindow addSubview:self.brightnessView];
+//            [self.brightnessView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//                make.width.height.mas_equalTo(155);
+//                make.leading.mas_equalTo((ScreenWidth-155)/2);
+//                make.top.mas_equalTo((ScreenHeight-155)/2);
+//            }];
         } else {
             if (currentOrientation == UIInterfaceOrientationLandscapeRight) {
                 [self toOrientation:UIInterfaceOrientationLandscapeRight];
             } else if (currentOrientation == UIDeviceOrientationLandscapeLeft){
                 [self toOrientation:UIInterfaceOrientationLandscapeLeft];
             }
-            [self.brightnessView removeFromSuperview];
-            [self addSubview:self.brightnessView];
-            [self.brightnessView mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.center.mas_equalTo(self);
-                make.width.height.mas_equalTo(155);
-            }];
+//            [self.brightnessView removeFromSuperview];
+//            [self addSubview:self.brightnessView];
+//            [self.brightnessView mas_remakeConstraints:^(MASConstraintMaker *make) {
+//                make.center.mas_equalTo(self);
+//                make.width.height.mas_equalTo(155);
+//            }];
             
         }
     }
