@@ -416,18 +416,18 @@ typedef NS_ENUM(NSInteger, PanDirection){
     self.singleTap.numberOfTapsRequired    = 1;
     [self addGestureRecognizer:self.singleTap];
     
-    // 双击(播放/暂停)
-    self.doubleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTapAction:)];
-    self.doubleTap.delegate                = self;
-    self.doubleTap.numberOfTouchesRequired = 1; //手指数
-    self.doubleTap.numberOfTapsRequired    = 2;
-    [self addGestureRecognizer:self.doubleTap];
-    
-    // 解决点击当前view时候响应其他控件事件
-    [self.singleTap setDelaysTouchesBegan:YES];
-    [self.doubleTap setDelaysTouchesBegan:YES];
-    // 双击失败响应单击事件
-    [self.singleTap requireGestureRecognizerToFail:self.doubleTap];
+//    // 双击(播放/暂停)
+//    self.doubleTap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTapAction:)];
+//    self.doubleTap.delegate                = self;
+//    self.doubleTap.numberOfTouchesRequired = 1; //手指数
+//    self.doubleTap.numberOfTapsRequired    = 2;
+//    [self addGestureRecognizer:self.doubleTap];
+//    
+//    // 解决点击当前view时候响应其他控件事件
+//    [self.singleTap setDelaysTouchesBegan:YES];
+//    [self.doubleTap setDelaysTouchesBegan:YES];
+//    // 双击失败响应单击事件
+//    [self.singleTap requireGestureRecognizerToFail:self.doubleTap];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -1217,29 +1217,29 @@ typedef NS_ENUM(NSInteger, PanDirection){
 
 #pragma mark - UIGestureRecognizerDelegate
 
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
-    
-    if (gestureRecognizer == self.shrinkPanGesture && self.isCellVideo) {
-        if (!self.isBottomVideo || self.isFullScreen) {
-            return NO;
-        }
-    }
-    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && gestureRecognizer != self.shrinkPanGesture) {
-        if ((self.isCellVideo && !self.isFullScreen) || self.playDidEnd || self.isLocked){
-            return NO;
-        }
-    }
-    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
-        if (self.isBottomVideo && !self.isFullScreen) {
-            return NO;
-        }
-    }
-    if ([touch.view isKindOfClass:[UISlider class]]) {
-        return NO;
-    }
-    
-    return YES;
-}
+//- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+//
+//    if (gestureRecognizer == self.shrinkPanGesture && self.isCellVideo) {
+//        if (!self.isBottomVideo || self.isFullScreen) {
+//            return NO;
+//        }
+//    }
+//    if ([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]] && gestureRecognizer != self.shrinkPanGesture) {
+//        if ((self.isCellVideo && !self.isFullScreen) || self.playDidEnd || self.isLocked){
+//            return NO;
+//        }
+//    }
+//    if ([gestureRecognizer isKindOfClass:[UITapGestureRecognizer class]]) {
+//        if (self.isBottomVideo && !self.isFullScreen) {
+//            return NO;
+//        }
+//    }
+//    if ([touch.view isKindOfClass:[UISlider class]]) {
+//        return NO;
+//    }
+//
+//    return YES;
+//}
 
 #pragma mark - Setter
 
