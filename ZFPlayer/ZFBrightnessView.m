@@ -40,8 +40,8 @@
 	static ZFBrightnessView *instance;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		instance = [[ZFBrightnessView alloc] init];
-		[[UIApplication sharedApplication].keyWindow addSubview:instance];
+//        instance = [[ZFBrightnessView alloc] init];
+//        [[UIApplication sharedApplication].keyWindow addSubview:instance];
 	});
 	return instance;
 }

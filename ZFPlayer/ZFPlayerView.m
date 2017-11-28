@@ -1442,13 +1442,13 @@ typedef NS_ENUM(NSInteger, PanDirection){
     }
     return _imageGenerator;
 }
-
-- (ZFBrightnessView *)brightnessView {
-    if (!_brightnessView) {
-        _brightnessView = [ZFBrightnessView sharedBrightnessView];
-    }
-    return _brightnessView;
-}
+//
+//- (ZFBrightnessView *)brightnessView {
+//    if (!_brightnessView) {
+//        _brightnessView = [ZFBrightnessView sharedBrightnessView];
+//    }
+//    return _brightnessView;
+//}
 
 - (NSString *)videoGravity {
     if (!_videoGravity) {
