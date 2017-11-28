@@ -26,7 +26,8 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "UIView+CustomControlView.h"
 #import "ZFPlayer.h"
-
+#import "AVPlayerItem+MCCacheSupport.h"
+#import "MCAVPlayerItemCacheFile.h"
 #define CellPlayerFatherViewTag  200
 
 //忽略编译器的警告
@@ -221,6 +222,16 @@ typedef NS_ENUM(NSInteger, PanDirection){
     return playerView;
 }
 
++ (void)removeCache
+{
+    [MCAVPlayerItemCacheFile removeAllCachedFile];
+}
+
++ (long) cachedFileSize
+{
+    return [MCAVPlayerItemCacheFile cachedFileSize];
+}
+
 - (void)playerControlView:(UIView *)controlView playerModel:(ZFPlayerModel *)playerModel {
     if (!controlView) {
         // 指定默认控制层
@@ -370,7 +381,8 @@ typedef NS_ENUM(NSInteger, PanDirection){
 - (void)configZFPlayer {
     self.urlAsset = [AVURLAsset assetWithURL:self.videoURL];
     // 初始化playerItem
-    self.playerItem = [AVPlayerItem playerItemWithAsset:self.urlAsset];
+    NSError *error;
+    self.playerItem = [AVPlayerItem mc_playerItemWithRemoteURL:self.videoURL error:&error];
     // 每次都重新创建Player，替换replaceCurrentItemWithPlayerItem:，该方法阻塞线程
     self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
     

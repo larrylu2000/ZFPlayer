@@ -23,6 +23,7 @@
 
 #import "ZFVideoListViewController.h"
 #import "MoviePlayerViewController.h"
+#import "ZFPlayerView.h"
 
 @interface ZFVideoListViewController ()
 @property (weak, nonatomic  ) IBOutlet UITableView *tableView;
@@ -63,7 +64,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"netListCell"];
-    cell.textLabel.text   = [NSString stringWithFormat:@"网络视频%zd",indexPath.row+1];
+    cell.textLabel.text   =  [NSString stringWithFormat:@"%.2f MB", [ZFPlayerView cachedFileSize] / 1024.0  / 1024];
     return cell;
 }
 
@@ -77,6 +78,7 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
 
+    [ZFPlayerView removeCache];
     MoviePlayerViewController *movie = (MoviePlayerViewController *)segue.destinationViewController;
     UITableViewCell *cell            = (UITableViewCell *)sender;
     NSIndexPath *indexPath           = [self.tableView indexPathForCell:cell];

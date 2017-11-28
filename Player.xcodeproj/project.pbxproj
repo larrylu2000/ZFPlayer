@@ -14,6 +14,14 @@
 		4947F7B31BE996AC003093C8 /* PlayerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4947F7B21BE996AC003093C8 /* PlayerUITests.m */; };
 		49CD65D11BF0C4EC0060DB9E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49CD65D01BF0C4EC0060DB9E /* MediaPlayer.framework */; };
 		49F272801BF2330700FCC767 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49F2727F1BF2330700FCC767 /* Info.plist */; };
+		5595D07E1FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D0721FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.m */; };
+		5595D07F1FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D0731FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.m */; };
+		5595D0801FCDA0710036D96E /* MCCacheSupportUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D0741FCDA0710036D96E /* MCCacheSupportUtils.m */; };
+		5595D0811FCDA0710036D96E /* MCAVPlayerItemCacheTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D0771FCDA0710036D96E /* MCAVPlayerItemCacheTask.m */; };
+		5595D0821FCDA0710036D96E /* MCAVPlayerItemCacheLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D0781FCDA0710036D96E /* MCAVPlayerItemCacheLoader.m */; };
+		5595D0831FCDA0710036D96E /* MCAVPlayerItemCacheFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D07A1FCDA0710036D96E /* MCAVPlayerItemCacheFile.m */; };
+		5595D0841FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D07B1FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.m */; };
+		5595D0881FCDA0830036D96E /* FCFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5595D0871FCDA0820036D96E /* FCFileManager.m */; };
 		6DFFA86AB7DE7145F8B2FDBB /* libPods-Player.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15E3CE675A5AD72E88B7F01B /* libPods-Player.a */; };
 		CC220D4A1DB7B504001191C7 /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = CC220D491DB7B504001191C7 /* MMMaterialDesignSpinner.m */; };
 		CC2877CC1D9B60760097CEDA /* UINavigationController+ZFPlayerRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2877C71D9B60760097CEDA /* UINavigationController+ZFPlayerRotation.m */; };
@@ -94,6 +102,22 @@
 		49CD65D01BF0C4EC0060DB9E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		49F2727F1BF2330700FCC767 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5025702D2252268F74E00592 /* Pods-Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-Player/Pods-Player.release.xcconfig"; sourceTree = "<group>"; };
+		5595D0701FCDA0710036D96E /* MCAVPlayerItemCacheLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAVPlayerItemCacheLoader.h; sourceTree = "<group>"; };
+		5595D0711FCDA0710036D96E /* MCAVPlayerItemCacheTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAVPlayerItemCacheTask.h; sourceTree = "<group>"; };
+		5595D0721FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayerItem+MCCacheSupport.m"; sourceTree = "<group>"; };
+		5595D0731FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAVPlayerItemRemoteCacheTask.m; sourceTree = "<group>"; };
+		5595D0741FCDA0710036D96E /* MCCacheSupportUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCCacheSupportUtils.m; sourceTree = "<group>"; };
+		5595D0751FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAVPlayerItemLocalCacheTask.h; sourceTree = "<group>"; };
+		5595D0761FCDA0710036D96E /* MCAVPlayerItemCacheFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAVPlayerItemCacheFile.h; sourceTree = "<group>"; };
+		5595D0771FCDA0710036D96E /* MCAVPlayerItemCacheTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAVPlayerItemCacheTask.m; sourceTree = "<group>"; };
+		5595D0781FCDA0710036D96E /* MCAVPlayerItemCacheLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAVPlayerItemCacheLoader.m; sourceTree = "<group>"; };
+		5595D0791FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+MCCacheSupport.h"; sourceTree = "<group>"; };
+		5595D07A1FCDA0710036D96E /* MCAVPlayerItemCacheFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAVPlayerItemCacheFile.m; sourceTree = "<group>"; };
+		5595D07B1FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCAVPlayerItemLocalCacheTask.m; sourceTree = "<group>"; };
+		5595D07C1FCDA0710036D96E /* MCCacheSupportUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCCacheSupportUtils.h; sourceTree = "<group>"; };
+		5595D07D1FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCAVPlayerItemRemoteCacheTask.h; sourceTree = "<group>"; };
+		5595D0861FCDA0820036D96E /* FCFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFileManager.h; sourceTree = "<group>"; };
+		5595D0871FCDA0820036D96E /* FCFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFileManager.m; sourceTree = "<group>"; };
 		CC220D481DB7B504001191C7 /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
 		CC220D491DB7B504001191C7 /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
 		CC2877C61D9B60760097CEDA /* UINavigationController+ZFPlayerRotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+ZFPlayerRotation.h"; sourceTree = "<group>"; };
@@ -207,20 +231,21 @@
 		4947F78C1BE996AC003093C8 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				CCD7ECC11E72A1E500A9207F /* ZFNavigationController */,
-				CC2CC6301CA24D4B0028BBDD /* ZFPlayer */,
-				CC725C1E1C894C8100C3EAF2 /* NetVideo */,
-				CC6C7AE21C9BDFBA0000AD58 /* PlayerViewController */,
-				CCE1C1321C9AA0D9004C95AC /* TbaleViewVideo */,
-				CC747D6D1E82672400D917B7 /* CollectionViewVideo */,
-				CC725C1D1C894C4A00C3EAF2 /* LocalVideo */,
+				5595D06F1FCDA0710036D96E /* AVPlayerCacheSupport */,
 				4947F7901BE996AC003093C8 /* AppDelegate.h */,
 				4947F7911BE996AC003093C8 /* AppDelegate.m */,
-				CC6945A91CB7F66300452D55 /* LaunchScreen.xib */,
-				CC48ECD61C8863DB009CF0D0 /* Main.storyboard */,
 				4947F7991BE996AC003093C8 /* Assets.xcassets */,
+				CC747D6D1E82672400D917B7 /* CollectionViewVideo */,
 				49F2727F1BF2330700FCC767 /* Info.plist */,
+				CC6945A91CB7F66300452D55 /* LaunchScreen.xib */,
+				CC725C1D1C894C4A00C3EAF2 /* LocalVideo */,
+				CC48ECD61C8863DB009CF0D0 /* Main.storyboard */,
+				CC725C1E1C894C8100C3EAF2 /* NetVideo */,
+				CC6C7AE21C9BDFBA0000AD58 /* PlayerViewController */,
 				4947F78D1BE996AC003093C8 /* Supporting Files */,
+				CCE1C1321C9AA0D9004C95AC /* TbaleViewVideo */,
+				CCD7ECC11E72A1E500A9207F /* ZFNavigationController */,
+				CC2CC6301CA24D4B0028BBDD /* ZFPlayer */,
 			);
 			path = Player;
 			sourceTree = SOURCE_ROOT;
@@ -249,6 +274,37 @@
 				4947F7B41BE996AC003093C8 /* Info.plist */,
 			);
 			path = PlayerUITests;
+			sourceTree = "<group>";
+		};
+		5595D06F1FCDA0710036D96E /* AVPlayerCacheSupport */ = {
+			isa = PBXGroup;
+			children = (
+				5595D0791FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.h */,
+				5595D0721FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.m */,
+				5595D0851FCDA0820036D96E /* FCFileManager */,
+				5595D0761FCDA0710036D96E /* MCAVPlayerItemCacheFile.h */,
+				5595D07A1FCDA0710036D96E /* MCAVPlayerItemCacheFile.m */,
+				5595D0701FCDA0710036D96E /* MCAVPlayerItemCacheLoader.h */,
+				5595D0781FCDA0710036D96E /* MCAVPlayerItemCacheLoader.m */,
+				5595D0711FCDA0710036D96E /* MCAVPlayerItemCacheTask.h */,
+				5595D0771FCDA0710036D96E /* MCAVPlayerItemCacheTask.m */,
+				5595D0751FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.h */,
+				5595D07B1FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.m */,
+				5595D07D1FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.h */,
+				5595D0731FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.m */,
+				5595D07C1FCDA0710036D96E /* MCCacheSupportUtils.h */,
+				5595D0741FCDA0710036D96E /* MCCacheSupportUtils.m */,
+			);
+			path = AVPlayerCacheSupport;
+			sourceTree = "<group>";
+		};
+		5595D0851FCDA0820036D96E /* FCFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				5595D0861FCDA0820036D96E /* FCFileManager.h */,
+				5595D0871FCDA0820036D96E /* FCFileManager.m */,
+			);
+			path = FCFileManager;
 			sourceTree = "<group>";
 		};
 		A89D51315C5CAFCAFF4E0FB8 /* Frameworks */ = {
@@ -594,6 +650,7 @@
 			files = (
 				CC725C2D1C894D2500C3EAF2 /* ZFVideoListViewController.m in Sources */,
 				CCB3510E1E63C02800FAF8FD /* UIAlertController+ZFPlayerRotation.m in Sources */,
+				5595D0801FCDA0710036D96E /* MCCacheSupportUtils.m in Sources */,
 				CC6C7AE51C9BDFE90000AD58 /* MoviePlayerViewController.m in Sources */,
 				CC69BD1F1DD2DC1B00019AC6 /* UIImageView+ZFCache.m in Sources */,
 				CC747D731E8268C100D917B7 /* ZFCollectionViewCell.m in Sources */,
@@ -601,15 +658,19 @@
 				CCE1C13B1C9AA11F004C95AC /* ZFVideoModel.m in Sources */,
 				CC747D701E8267BB00D917B7 /* ZFCollectionViewController.m in Sources */,
 				CCD7ECC61E72A1E500A9207F /* UINavigationController+ZFFullscreenPopGesture.m in Sources */,
+				5595D0881FCDA0830036D96E /* FCFileManager.m in Sources */,
 				CC725C321C894D2D00C3EAF2 /* ZFDownloadViewController.m in Sources */,
 				CC2CC63F1CA24D4B0028BBDD /* ZFPlayerView.m in Sources */,
 				CC2CC63B1CA24D4B0028BBDD /* ZFBrightnessView.m in Sources */,
 				CC8693471CC9BF5E0037E71B /* ZFPVideoResolution.m in Sources */,
 				CC7D5E951D59AAAC000AC18A /* ASValueTrackingSlider.m in Sources */,
+				5595D0821FCDA0710036D96E /* MCAVPlayerItemCacheLoader.m in Sources */,
+				5595D07F1FCDA0710036D96E /* MCAVPlayerItemRemoteCacheTask.m in Sources */,
 				CC2CC63D1CA24D4B0028BBDD /* ZFPlayerControlView.m in Sources */,
 				CC220D4A1DB7B504001191C7 /* MMMaterialDesignSpinner.m in Sources */,
 				CCEF1BF91CACB28E00B0DD78 /* ZFDownloadedCell.m in Sources */,
 				CC6FF40D1DB9DFB300222AAC /* ZFPlayerModel.m in Sources */,
+				5595D0831FCDA0710036D96E /* MCAVPlayerItemCacheFile.m in Sources */,
 				CCE1C13E1C9AA128004C95AC /* ZFTableViewController.m in Sources */,
 				CC2877CD1D9B60760097CEDA /* UITabBarController+ZFPlayerRotation.m in Sources */,
 				CC6FF3681DB4A32E00222AAC /* UIView+CustomControlView.m in Sources */,
@@ -618,7 +679,10 @@
 				CC7D5E961D59AAAC000AC18A /* ASValuePopUpView.m in Sources */,
 				CC2877CC1D9B60760097CEDA /* UINavigationController+ZFPlayerRotation.m in Sources */,
 				4947F78F1BE996AC003093C8 /* main.m in Sources */,
+				5595D07E1FCDA0710036D96E /* AVPlayerItem+MCCacheSupport.m in Sources */,
 				CCC20EAB1E77DA2B0019B9D0 /* UIWindow+CurrentViewController.m in Sources */,
+				5595D0811FCDA0710036D96E /* MCAVPlayerItemCacheTask.m in Sources */,
+				5595D0841FCDA0710036D96E /* MCAVPlayerItemLocalCacheTask.m in Sources */,
 				CC2877CE1D9B60760097CEDA /* UIViewController+ZFPlayerRotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
