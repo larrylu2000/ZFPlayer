@@ -231,7 +231,6 @@
 		4947F78C1BE996AC003093C8 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				5595D06F1FCDA0710036D96E /* AVPlayerCacheSupport */,
 				4947F7901BE996AC003093C8 /* AppDelegate.h */,
 				4947F7911BE996AC003093C8 /* AppDelegate.m */,
 				4947F7991BE996AC003093C8 /* Assets.xcassets */,
@@ -339,6 +338,7 @@
 		CC2CC6301CA24D4B0028BBDD /* ZFPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				5595D06F1FCDA0710036D96E /* AVPlayerCacheSupport */,
 				CC2877C51D9B60760097CEDA /* Category */,
 				CC2CC6331CA24D4B0028BBDD /* ZFPlayer.bundle */,
 				CC2CC6541CA38A710028BBDD /* ZFPlayer.h */,
